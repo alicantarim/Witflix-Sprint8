@@ -1,7 +1,7 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+//import reactLogo from "./assets/react.svg";
+//import viteLogo from "/vite.svg";
+//import "./App.css";
 import "./Form.css";
 import Profile from "./components/Profile";
 
@@ -63,16 +63,16 @@ function App() {
 
   return (
     <>
-      <form onSubmit="">
+      <form onSubmit={handleSubmit}>
         {form.username}
         <div className="input-group">
           <label htmlFor="username">Username</label>
           <input
+            value={form.username}
             onChange={handleChange}
             type="text"
-            name="username"
             id="username"
-            value={form.username}
+            name="username"
             placeholder="Kullanıcı adınızı giriniz."
           />
         </div>
